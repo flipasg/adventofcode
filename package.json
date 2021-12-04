@@ -1,0 +1,25 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flipasg/adventofcode.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Iker Garcia <ikergarciadev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flipasg/adventofcode/issues"
+  },
+  "homepage": "https://github.com/flipasg/adventofcode#readme",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
+}
