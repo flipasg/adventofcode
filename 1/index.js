@@ -1,5 +1,5 @@
-const countIncreasedMeasures = (coords) =>
-  coords.reduce(
+const countIncreasedMeasures = (measures) =>
+  measures.reduce(
     (curr, next, index, list) =>
       index > 0 && next > list[index - 1] ? curr + 1 : curr,
     0
