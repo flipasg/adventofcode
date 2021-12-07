@@ -1,4 +1,4 @@
-const measures = [
+export const INPUT = [
   123, 126, 130, 137, 140, 150, 155, 157, 173, 186, 201, 205, 234, 236, 237,
   252, 254, 258, 265, 266, 270, 278, 285, 289, 310, 332, 323, 349, 371, 372,
   373, 380, 381, 382, 383, 401, 406, 408, 411, 412, 415, 410, 413, 423, 435,
@@ -155,25 +155,4 @@ const measures = [
   10390, 10410, 10411,
 ];
 
-const chunkMeasures = (measures, chunkSize) =>
-  measures.reduce((curr, next, index, list) => {
-    if (index < chunkSize) {
-      curr[0] = [].concat(curr[0] || [], next);
-    } else {
-      curr[curr.length] = curr[curr.length - 1].slice(1).concat(next);
-    }
-    return curr;
-  }, []);
-
-const countIncreasedMeasures = (measures) =>
-  measures.reduce(
-    (curr, next, index, list) =>
-      index > 0 && next > list[index - 1] ? curr + 1 : curr,
-    0
-  );
-
-console.log(
-  countIncreasedMeasures(chunkMeasures(measures, 3).map((measureChunk) =>
-    measureChunk.reduce((curr, next) => curr + next)
-  ))
-);
+export const TEST_INPUT = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263];

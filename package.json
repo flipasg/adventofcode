@@ -1,16 +1,18 @@
 {
   "name": "adventofcode",
   "version": "1.0.0",
-  "description": "",
+  "description": "solutions of advent-of-code exercises",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose",
+    "test-watch": "jest --onlyChanged --verbose --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flipasg/adventofcode.git"
   },
   "keywords": [
+    "advent-of-code",
     "javascript"
   ],
   "author": "Iker Garcia <ikergarciadev@gmail.com>",
@@ -19,7 +21,9 @@
     "url": "https://github.com/flipasg/adventofcode/issues"
   },
   "homepage": "https://github.com/flipasg/adventofcode#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.2",
     "jest": "^27.4.3"
   }
 }

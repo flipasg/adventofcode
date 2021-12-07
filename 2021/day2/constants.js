@@ -1,4 +1,4 @@
-const INSTRUCTIONS = [
+export const INPUT = [
   'forward 8',
   'forward 3',
   'forward 8',
@@ -1001,7 +1001,7 @@ const INSTRUCTIONS = [
   'forward 7',
 ];
 
-const TEST_INSTRUCTIONS = [
+export const TEST_INPUT = [
   'forward 5',
   'down 5',
   'forward 8',
@@ -1009,36 +1009,3 @@ const TEST_INSTRUCTIONS = [
   'down 8',
   'forward 2',
 ];
-
-const INSTRUCTIONS_MAPPINS = {
-  forward: ({ x, y }, quantity) => ({
-    x: x + quantity,
-    y,
-  }),
-  down: ({ x, y }, quantity) => ({
-    x,
-    y: y + quantity,
-  }),
-  up: ({ x, y }, quantity) => ({
-    x,
-    y: y - quantity,
-  }),
-};
-
-const START_POINT = {
-  x: 0,
-  y: 0,
-};
-
-const moveSubmarine = (instructions) =>
-  instructions
-    .map((instruction) => instruction.split(' '))
-    .reduce(
-      (point, instruction) =>
-        INSTRUCTIONS_MAPPINS[instruction[0]](point, +instruction[1]),
-      START_POINT
-    );
-
-const submarinePosition = moveSubmarine(INSTRUCTIONS);
-
-console.log(submarinePosition.x * submarinePosition.y);
